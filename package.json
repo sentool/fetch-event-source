@@ -1,0 +1,31 @@
+{
+  "name": "@sentool/fetch-event-source",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Using the Fetch API to request an SSE (Server-Sent Events) endpoint.",
+  "keywords": [
+    "eventsource",
+    "sse"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sentool/fetch-event-source.git"
+  },
+  "scripts": {
+    "dist": "npx rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.18.1"
+  }
+}
