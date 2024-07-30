@@ -1,10 +1,10 @@
 {
   "name": "@sentool/fetch-event-source",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publishConfig": {
     "access": "public"
   },
-  "description": "Using the Fetch API to request an SSE (Server-Sent Events) endpoint.",
+  "description": "Using the Fetch API to request an SSE endpoint.",
   "keywords": [
     "eventsource",
     "sse"
