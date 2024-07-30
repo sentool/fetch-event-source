@@ -1,7 +1,9 @@
-## Fetch Event Source
-Using the Fetch API to request an SSE (Server-Sent Events) endpoint.
+# @sentool/fetch-event-source
+
+Using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to request an SSE (Server-Sent Events) endpoint. It is a refactoring of `@microsoft/fetch-event-source`, with a more concise code implementation, and it supports use in both Node.js and browser environments.
 
 ## Install
+
 ```bash
 npm install @sentool/fetch-event-source
 ```
@@ -45,5 +47,29 @@ You can also use a CDN to include it.
 </script>
 ```
 
+You can abort the request at any time within any event, for example:
+
+```js
+const eventSource = await fetchEventSource(url, options);
+
+// Assume the request is aborted after 3 seconds
+setTimeout(() => {
+  eventSource.abort();
+}, 3000);
+```
+
+### Options
+
+In addition to [the options available]((https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)) in the Fetch API, the following extra options have been added:
+
+| option | type | description |
+| --- | --- | --- |
+| `onOpen` | function | Call when the request has been opened. |
+| `onMessage` | function | Call when data is received function an event source. |
+| `onError` | function | Call when an error occurs. |
+| `done` | function | Call when the stream has completed. |
+| `parseJson` | boolean | Whether to parse the response as JSON. Defaults to `true`. |
+
 ## License
-MIT
+
+MIT © [sentool](https://github.com/sentool)
