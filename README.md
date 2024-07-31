@@ -1,5 +1,12 @@
 English · [中文](./README.zh-CN.md)
 
+[npm]: https://img.shields.io/npm/v/@sentool/fetch-event-source
+[npm-url]: https://www.npmjs.com/package/@sentool/fetch-event-source
+[size]: https://packagephobia.now.sh/badge?p=@sentool/fetch-event-source
+[size-url]: https://packagephobia.now.sh/result?p=@sentool/fetch-event-source
+
+[![npm][npm]][npm-url] [![size][size]][size-url]
+
 # @sentool/fetch-event-source
 
 Using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to request an SSE (Server-Sent Events) endpoint. It is a refactoring of `@microsoft/fetch-event-source`, with a more concise code implementation, and it supports use in both Node.js and browser environments.

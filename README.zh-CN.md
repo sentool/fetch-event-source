@@ -1,5 +1,12 @@
 [English](./README.md) · 中文
 
+[npm]: https://img.shields.io/npm/v/@sentool/fetch-event-source
+[npm-url]: https://www.npmjs.com/package/@sentool/fetch-event-source
+[size]: https://packagephobia.now.sh/badge?p=@sentool/fetch-event-source
+[size-url]: https://packagephobia.now.sh/result?p=@sentool/fetch-event-source
+
+[![npm][npm]][npm-url] [![size][size]][size-url]
+
 # @sentool/fetch-event-source
 
 使用 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 请求 SSE（Server-Sent Events）端点。它是对 `@microsoft/fetch-event-source` 项目的重构，代码实现得更为简练，支持在 Node.js 和浏览器中使用。
