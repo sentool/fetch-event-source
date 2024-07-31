@@ -2,7 +2,7 @@
 
 # @sentool/fetch-event-source
 
-使用 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 请求 SSE（Server-Sent Events）端点。它是对 `@microsoft/fetch-event-source` 的重构，代码实现得更为简练，支持在 Node.js 和浏览器中使用。
+使用 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 请求 SSE（Server-Sent Events）端点。它是对 `@microsoft/fetch-event-source` 项目的重构，代码实现得更为简练，支持在 Node.js 和浏览器中使用。
 
 ## 安装
 
@@ -39,7 +39,7 @@ await fetchEventSource('/api/sse', {
 });
 ```
 
-你也可以在浏览器中通过 CDN 的方式引入
+或在浏览器中通过 CDN 的方式引入
 
 ```js
 <script src="https://unpkg.com/@sentool/fetch-event-source/dist/index.min.js"></script>
