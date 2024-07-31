@@ -60,7 +60,7 @@ setTimeout(() => {
 
 ### Options
 
-In addition to [the options available]((https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)) in the Fetch API, the following extra options have been added:
+In addition to [the options available](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit) in the Fetch API, the following extra options have been added:
 
 | option | type | description |
 | --- | --- | --- |
