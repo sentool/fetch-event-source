@@ -1,3 +1,5 @@
+English · [中文](./README.zh-CN.md)
+
 # @sentool/fetch-event-source
 
 Using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to request an SSE (Server-Sent Events) endpoint. It is a refactoring of `@microsoft/fetch-event-source`, with a more concise code implementation, and it supports use in both Node.js and browser environments.
