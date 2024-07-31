@@ -54,9 +54,9 @@ class FetchEventSource {
         const chunk = decoder.decode(value); // 解码 Uint8Array
         eventsourceParser(chunk, options.onMessage, { instance: this, parseJson }); // 解析 SSE 数据格式
 
-        readStream();
+        await readStream();
       }
-      readStream();
+      await readStream();
     } catch(error) {
       this.abort();
       delete this.buffer;
