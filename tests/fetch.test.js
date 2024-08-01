@@ -32,10 +32,10 @@ describe('fetchEventSource', () => {
     const mockOnError = jest.fn();
 
     await fetchEventSource('/sse', {
-      onMessage: mockOnMessage,
-      onOpen: mockOnOpen,
+      onmessage: mockOnMessage,
+      onopen: mockOnOpen,
       done: mockDone,
-      onError: mockOnError,
+      onerror: mockOnError,
     });
 
     expect(mockOnOpen).toHaveBeenCalled();

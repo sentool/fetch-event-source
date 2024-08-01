@@ -31,13 +31,13 @@ await fetchEventSource('/api/sse', {
   body: JSON.stringify({
     input: ""
   }),
-  onOpen(response) {
+  onopen(response) {
     console.log('Request has been opened.');
   },
-  onMessage(event) {
+  onmessage(event) {
     console.log(event);
   },
-  onError(error) {
+  onerror(error) {
     console.error(error);
   },
   done() {
@@ -74,9 +74,9 @@ setTimeout(() => {
 
 | 选项 | 类型 | 说明 |
 | --- | --- | --- |
-| `onOpen` | function | 请求成功打开后触发 |
-| `onMessage` | function | 接受到事件流数据时触发。 |
-| `onError` | function | 出错时触发 |
+| `onopen` | function | 请求成功打开后触发 |
+| `onmessage` | function | 接受到事件流数据时触发。 |
+| `onerror` | function | 出错时触发 |
 | `done` | function | 事件流完成后触发 |
 | `parseJson` | boolean | 是否自动解析响应数据中的 JSON 字符。默认 `true` |
 

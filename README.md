@@ -31,13 +31,13 @@ await fetchEventSource('/api/sse', {
   body: JSON.stringify({
     input: ""
   }),
-  onOpen(response) {
+  onopen(response) {
     console.log('Request has been opened.');
   },
-  onMessage(event) {
+  onmessage(event) {
     console.log(event);
   },
-  onError(error) {
+  onerror(error) {
     console.error(error);
   },
   done() {
@@ -73,9 +73,9 @@ In addition to [the options available](https://developer.mozilla.org/en-US/docs/
 
 | option | type | description |
 | --- | --- | --- |
-| `onOpen` | function | Call when the request has been opened. |
-| `onMessage` | function | Call when data is received function an event source. |
-| `onError` | function | Call when an error occurs. |
+| `onopen` | function | Call when the request has been opened. |
+| `onmessage` | function | Call when data is received function an event source. |
+| `onerror` | function | Call when an error occurs. |
 | `done` | function | Call when the stream has completed. |
 | `parseJson` | boolean | Whether to parse the response as JSON. Defaults to `true`. |
 

@@ -40,7 +40,7 @@ class FetchEventSource {
         throw new Error(`HTTP ${response.status}`);
       }
 
-      options.onOpen?.(response);
+      options.onopen?.(response);
 
       // 读取流
       const reader = response.body.getReader();
@@ -52,7 +52,7 @@ class FetchEventSource {
         if (done) return options.done?.(response);
 
         const chunk = decoder.decode(value); // 解码 Uint8Array
-        eventsourceParser(chunk, options.onMessage, { instance: this, parseJson }); // 解析 SSE 数据格式
+        eventsourceParser(chunk, options.onmessage, { instance: this, parseJson }); // 解析 SSE 数据格式
 
         await readStream();
       }
@@ -60,7 +60,7 @@ class FetchEventSource {
     } catch(error) {
       this.abort();
       delete this.buffer;
-      options.onError?.(error);
+      options.onerror?.(error);
     }
   }
 
