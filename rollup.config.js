@@ -1,7 +1,8 @@
 import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 
-const outlookDIR = 'dist';
+const DIR = 'dist';
+const FILENAME = 'index';
 const rollupConfig = [];
 
 // output cjs
@@ -9,7 +10,7 @@ rollupConfig.push({
   input: 'src/index.js',
   output: [
     {
-      file: `${outlookDIR}/index.cjs`,
+      file: `${DIR}/${FILENAME}.cjs`,
       format: 'cjs',
       sourcemap: true,
     }
@@ -28,11 +29,11 @@ rollupConfig.push({
   input: 'src/index.js',
   output: [
     {
-      file: `${outlookDIR}/index.esm.js`,
+      file: `${DIR}/${FILENAME}.esm.js`,
       ...outputESMConfig,
     },
     {
-      file: `${outlookDIR}/index.esm.min.js`,
+      file: `${DIR}/${FILENAME}.esm.min.js`,
       ...outputESMConfig,
       plugins: [terser()],
     }
@@ -52,11 +53,11 @@ rollupConfig.push({
   input: 'src/index.js',
   output: [
     {
-      file: `${outlookDIR}/index.js`,
+      file: `${DIR}/${FILENAME}.js`,
       ...outputUMDConfig,
     },
     {
-      file: `${outlookDIR}/index.min.js`,
+      file: `${DIR}/${FILENAME}.min.js`,
       ...outputUMDConfig,
       plugins: [terser()],
     },
