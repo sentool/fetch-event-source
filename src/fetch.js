@@ -30,6 +30,8 @@ class FetchEventSource {
         ...options,
       });
 
+      await options.onopen?.(response);
+
       // 响应异常
       if (!response.ok) {
         const contentType = response.headers.get('content-type');
@@ -39,8 +41,6 @@ class FetchEventSource {
         }
         throw new Error(`HTTP ${response.status}`);
       }
-
-      options.onopen?.(response);
 
       // 读取流
       const reader = response.body.getReader();
